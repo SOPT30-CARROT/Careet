@@ -107,15 +107,13 @@ export한 친구의 이름 바꿔서 쓰지 말기!
     │   ├── common 🗂 공통으로 쓰일 컴포넌트 저장
     │   │   ├── Footer
     │   │   ├── Header
-    │   │   └── Icon
-    │   ├── main 🗂 main 페이지에 쓰일 컴포넌트 저장
-    │   └── question 🗂 question 페이지에 쓰일 컴포넌트 저장
+    │   │   └── assets
+    │   ├── home 🗂 main 페이지에 쓰일 컴포넌트 저장
+    │   └── myPage 🗂 question 페이지에 쓰일 컴포넌트 저장
     ├── pages 🗂 라우팅 시 보여질 페이지 컴포넌트 저장
     │   ├── home
     │   └── myPage
-    │       ├── CreateQuestion
-    │       ├── Question
-    │       └── SearchQuestion
+    │       └── MyPage
     └── styles
         ├── GlobalStyle.js
         └── color.js
