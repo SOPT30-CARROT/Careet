@@ -80,7 +80,8 @@ export한 친구의 이름 바꿔서 쓰지 말기!
 
 ## commit message 컨벤션
 
-- [gitmoji](https://gitmoji.dev/) 사용
+- [gitmoji](https://gitmoji.dev/) 쓸람쓸
+- 안쓰면 커밋 컨벤션 대표적인거만 지키자~
 
 ## 브랜치 전략 (ex. git flow)
 
