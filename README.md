@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+## 팀원 소개
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+	<table>
+	<th>정세연 @n0eyes</th>
+  <th>서혜은 @henization</th>
+	<th>최유진 @choichoijin</th>
+	<tr>
+		<td><img src="https://github.com/n0eyes.png"></td>
+		<td><img src="https://github.com/henization.png"></td>
+		<td><img src="https://github.com/choichoijin.png"></td>
+	</tr>
+	<tr>
+	<td>
+		<ul>
+		<li>프리라이더</li>
+		</ul>
+	</td>
+	<td>
+	<ul>
+		<li>기사1</li>
+	</ul>
+	</td>
+	<td>
+		<ul>
+		<li>기사2</li>
+		</ul>
+	</tr>
+	</table>
+</div>
 
-## Available Scripts
+## 기술 스택
 
-In the project directory, you can run:
+<div align="center">
+  <img src="https://img.shields.io/badge/Javascript-F2CE04?style=flat-square&logo=javascript&logoColor=white"/><br>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/>
+  <img src="https://img.shields.io/badge/styled--components-DB7093?style=flat-square&logo=styled-components&logoColor=white"/>
+  <img src="https://img.shields.io/badge/github action-2671E5?style=flat-square&logo=GitHub%20Actions&logoColor=white"/>
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 코드 컨벤션
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 컴포넌트 선언
 
-### `npm test`
+최상위는 function ~
+아래 함수는 const ~
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
+function Component() {
+  const handleaaaa = () => {};
+}
+```
 
-### `npm run build`
+### 핸들러 함수
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+기능 기준으로 쓰되 (`modalOpen` 등),
+정말 이 함수가 하는 일이 특정 이벤트 전용이라면 `handle[이벤트당한요소][이벤트]` (`handleInputChange` 등)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 컴포넌트 이름
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. `buttonSearch`
+2. `searchButton` ✅
+3. `btnSearch`
+4. `searchBtn`
 
-### `npm run eject`
+### style 붙인 거
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+스타일만을 위해서 만든 컴포넌트는 styled를 붙이자
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. ❌ `StyledDiv`
+2. `StyledTitle`
+3. `StyledWrapper`
+4. `StyledImage`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### export , import
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+export한 친구의 이름 바꿔서 쓰지 말기!
+안 그래도 되도록 변수/함수 이름은 자세하게 쓰기
 
-## Learn More
+## commit message 컨벤션
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [gitmoji](https://gitmoji.dev/) 사용
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 브랜치 전략 (ex. git flow)
 
-### Code Splitting
+- git flow 사용
+- 작업 전에 이슈 생성
+- 이슈 번호로 브랜치를 파서 작업
+- 작업이 다 끝나면 피쳐 브랜치에서 main 브랜치로 Pull Request 작성
+- 같은 팀원 2인의 Approve를 받아야 main 브랜치에 머지 가능
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 폴더 구조
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+.
+├── mock-data 🗂 목 데이터 저장
+├── package.json 📦 설치된 패키지를 관리하는 파일
+└── src
+    ├── App.jsx ✡️ 앱의 라우팅과 글로벌 스타일 지정
+    ├── index.js
+    ├── component
+    │   ├── common 🗂 공통으로 쓰일 컴포넌트 저장
+    │   │   ├── Footer
+    │   │   ├── Header
+    │   │   └── Icon
+    │   ├── main 🗂 main 페이지에 쓰일 컴포넌트 저장
+    │   └── question 🗂 question 페이지에 쓰일 컴포넌트 저장
+    ├── pages 🗂 라우팅 시 보여질 페이지 컴포넌트 저장
+    │   ├── Main
+    │   └── question
+    │       ├── CreateQuestion
+    │       ├── Question
+    │       └── SearchQuestion
+    └── styles
+        ├── GlobalStyle.js
+        └── color.js
+```
