@@ -16,9 +16,14 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "prettier"],
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
+  plugins: ["react"],
   rules: {
-    // "react/react-in-jsx-scope": "off",
+    "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "react/display-name": "off",
     "prettier/prettier": [
