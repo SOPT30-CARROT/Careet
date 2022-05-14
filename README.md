@@ -111,8 +111,8 @@ export한 친구의 이름 바꿔서 쓰지 말기!
     │   ├── main 🗂 main 페이지에 쓰일 컴포넌트 저장
     │   └── question 🗂 question 페이지에 쓰일 컴포넌트 저장
     ├── pages 🗂 라우팅 시 보여질 페이지 컴포넌트 저장
-    │   ├── Main
-    │   └── question
+    │   ├── home
+    │   └── myPage
     │       ├── CreateQuestion
     │       ├── Question
     │       └── SearchQuestion
