@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "AppleSDGothicNeoB00";
+  src: url("./AppleSDNeo/AppleSDGothicNeoB.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AppleSDGothicNeoEB00";
+  src: url("./AppleSDNeo/AppleSDGothicNeoEB.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AppleSDGothicNeoSB00";
+  src: url("./AppleSDNeo/AppleSDGothicNeoSB.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AppleSDGothicNeoM00";
+  src: url("./AppleSDNeo/AppleSDGothicNeoM.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("./Helvetica/Helvetica.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Futura";
+  src: url("./Futura/FuturaMedium.ttf") format("truetype");
+}
