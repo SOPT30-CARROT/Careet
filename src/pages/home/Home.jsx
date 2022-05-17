@@ -12,9 +12,4 @@ function Home() {
 
 export default Home;
 
-const StyledRoot = styled.div`
-  width: 172.8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+const StyledRoot = styled.div``;
