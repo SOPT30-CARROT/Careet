@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import FavPlace from "pages/home/FavPlace";
+import FavePlace from "pages/home/FavePlace";
 import MiddleBanner from "components/home/MiddleBanner";
 
 function Home() {
   return (
     <StyledRoot>
-      <FavPlace />
+      <FavePlace />
       <MiddleBanner />
     </StyledRoot>
   );
