@@ -1,9 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import KeywordTag from "components/home/KeywordTag";
+
 function Home() {
-  return <StyledRoot>Home</StyledRoot>;
+  return <KeywordTag />;
 }
 
 export default Home;
-
-const StyledRoot = styled.div``;
