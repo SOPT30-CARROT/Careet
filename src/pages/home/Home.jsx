@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import MiddleBanner from "components/home/MiddleBanner";
+
 function Home() {
-  return <StyledRoot>Home</StyledRoot>;
+  return (
+    <StyledRoot>
+      <MiddleBanner />
+    </StyledRoot>
+  );
 }
 
 export default Home;
