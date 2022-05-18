@@ -29,5 +29,12 @@ export const StyledRoot = styled.div`
     display: inline;
     border: 0.1rem solid ${colors.tagGray}; //색 지정 필요.
     border-radius: 1.8rem;
+
+    &:hover {
+      background-color: ${colors.orange};
+      color: ${colors.white};
+      cursor: pointer;
+      border-color: ${colors.orange};
+    }
   }
 `;
