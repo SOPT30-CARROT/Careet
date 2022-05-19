@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import FavePlace from "pages/home/FavePlace";
+import FavePlace from "components/home/FavePlace";
 import MiddleBanner from "components/home/MiddleBanner";
 
 function Home() {
