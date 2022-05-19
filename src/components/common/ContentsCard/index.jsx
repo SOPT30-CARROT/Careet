@@ -1,7 +1,7 @@
 import React from "react";
 import { ImgWrapper, StyledRoot, Title } from "./style";
-import { Component as Mark } from "components/common/assets/icon/bookmark_ic_s.svg";
-import { Component as UnMark } from "components/common/assets/icon/bookmark_ic.svg";
+import { ReactComponent as Mark } from "components/common/assets/icon/bookmark_ic_s.svg";
+import { ReactComponent as UnMark } from "components/common/assets/icon/bookmark_ic.svg";
 
 function ContentsCard({ thumbnail, title, isBookmarked }) {
   return (

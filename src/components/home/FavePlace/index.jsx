@@ -1,11 +1,11 @@
 import ContentsCard from "components/common/ContentsCard";
 import React, { useState } from "react";
-import { StyledRoot } from "./style";
-import { FaveCardImg1 } from "components/common/assets/img/fave_card_img1.png";
-import { FaveCardImg2 } from "components/common/assets/img/fave_card_img2.png";
-import { FaveCardImg3 } from "components/common/assets/img/fave_card_img3.png";
-import { FaveCardImg4 } from "components/common/assets/img/fave_card_img4.png";
-import { FaveCardImg5 } from "components/common/assets/img/fave_card_img5.png";
+import { CardsWrapper, StyledRoot } from "./style";
+import FaveCardImg1 from "components/common/assets/img/fave_card_img1.png";
+import FaveCardImg2 from "components/common/assets/img/fave_card_img2.png";
+import FaveCardImg3 from "components/common/assets/img/fave_card_img3.png";
+import FaveCardImg4 from "components/common/assets/img/fave_card_img4.png";
+import FaveCardImg5 from "components/common/assets/img/fave_card_img5.png";
 
 // img랑 title이랑 북마크 여부를 각각 객체로 만들것인지
 // or 카드별로 img/title/븍마크 를 묶을지
@@ -61,7 +61,17 @@ function FavePlace() {
 
   return (
     <StyledRoot>
-      {/* {faveCardsArr.map(faveCard => <ContentsCard thumbnail={faveCard[0]} title={faveCard[1]} isBookmarked={faveCard[2]})} */}
+      {faveCardsArr.map((faveCard, index) => {
+        return (
+          <CardsWrapper key={index}>
+            <ContentsCard
+              thumbnail={faveCard[0]}
+              title={faveCard[1]}
+              isBookmarked={faveCard[2]}
+            />
+          </CardsWrapper>
+        );
+      })}
     </StyledRoot>
   );
 }
