@@ -42,21 +42,21 @@ function FavePlace() {
       "오픈 3일 만에 6억 원 매출? 와인 전문 매장'보틀벙커' 체험기",
       faveCard2Bookmarked,
     ],
-    [
-      FaveCardImg3,
-      "MZ세대가 생각하는 ‘핫플'의 기준이 바뀌고 있다",
-      faveCard3Bookmarked,
-    ],
-    [
-      FaveCardImg4,
-      "Z세대가 직접 추천해준 졸업 선물 핫 아이템6",
-      faveCard4Bookmarked,
-    ],
-    [
-      FaveCardImg5,
-      "쉿 우리끼리 봐요. Z세대 팬 비율이 높은 아티스트 LIST",
-      faveCard5Bookmarked,
-    ],
+    // [
+    //   FaveCardImg3,
+    //   "MZ세대가 생각하는 ‘핫플'의 기준이 바뀌고 있다",
+    //   faveCard3Bookmarked,
+    // ],
+    // [
+    //   FaveCardImg4,
+    //   "Z세대가 직접 추천해준 졸업 선물 핫 아이템6",
+    //   faveCard4Bookmarked,
+    // ],
+    // [
+    //   FaveCardImg5,
+    //   "쉿 우리끼리 봐요. Z세대 팬 비율이 높은 아티스트 LIST",
+    //   faveCard5Bookmarked,
+    // ],
   ];
 
   return (
