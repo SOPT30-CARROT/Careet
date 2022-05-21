@@ -48,6 +48,7 @@ const StyledContainer = styled.div`
   margin: 0 auto;
   display: flex;
   position: relative;
+  cursor: pointer;
 `;
 
 const StyledBookmark = styled(Bookmark)`
@@ -69,14 +70,6 @@ const InfoText = styled.div`
     margin-top: 5.3rem;
     margin-bottom: 1.5rem;
   }
-  h2 {
-    font-family: "AppleSDGothicNeoEB00";
-    font-size: 3.6rem;
-    font-weight: 400;
-    color: ${colors.black};
-    margin-bottom: 1.1rem;
-    line-height: 4.561rem;
-  }
   p {
     font-family: "AppleSDGothicNeoSB00";
     font-size: 1.55rem;
@@ -96,6 +89,16 @@ const InfoText = styled.div`
   }
 `;
 
+const Title = styled.h2`
+  font-family: "AppleSDGothicNeoEB00";
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: ${(props) =>
+    props.isHovering === true ? colors.orange : colors.black};
+  margin-bottom: 1.1rem;
+  line-height: 4.561rem;
+`;
+
 const ImageWrapper = styled.div``;
 
 export {
@@ -103,6 +106,7 @@ export {
   StyledContainer,
   ImageWrapper,
   InfoText,
+  Title,
   StyledArrowLeft,
   StyledArrowRight,
   StyledViewIcon,
