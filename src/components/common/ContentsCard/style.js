@@ -6,6 +6,7 @@ export const StyledRoot = styled.div`
   flex-direction: column;
   width: 41.8rem;
   height: 34.8rem;
+  font-family: "AppleSDGothicNeoB00";
 `;
 
 export const ImgWrapper = styled.div`
@@ -21,9 +22,14 @@ export const Title = styled.div`
   letter-spacing: -1.5%;
   margin-top: 1.6rem;
   margin-bottom: 1.7rem;
-  font-family: "AppleSDGothicNeoB";
+  width: 40.1rem;
+  height: 6.2rem;
 `;
 
 export const BookmarkWrapper = styled.div`
-  /* position: absolute; */
+  /*  정렬할 때는  요소에 float 먹이기!*/
+  margin-right: 0.3rem;
+  svg {
+    float: right;
+  }
 `;
