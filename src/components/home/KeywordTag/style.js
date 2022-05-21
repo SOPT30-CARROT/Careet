@@ -5,7 +5,6 @@ export const StyledRoot = styled.div`
 
   h3 {
     font-family: "AppleSDGothicNeoB";
-    src: url("./AppleSDNeo/AppleSDGothicNeo.ttf") format("truetype");
     font-size: 2.9rem;
     font-weight: bold;
 
@@ -21,7 +20,6 @@ export const StyledRoot = styled.div`
 
   li {
     font-family: "AppleSDGothicNeoSB00";
-    src: url("./AppleSDNeo/AppleSDGothicNeoSB.ttf") format("truetype");
     color: ${colors.gray2};
     font-size: 1.6rem;
     line-height: 2.23rem;
