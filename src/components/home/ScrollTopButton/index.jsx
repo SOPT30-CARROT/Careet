@@ -1,8 +1,14 @@
 import React from "react";
-import { StyledNavIcon } from "./style";
+import { StyledScrollTopButton } from "./style";
 
-function middleBanner() {
-  return <StyledNavIcon />;
+function ScrollTopButton() {
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+  return <StyledScrollTopButton onClick={scrollTop} />;
 }
 
-export default middleBanner;
+export default ScrollTopButton;
