@@ -6,4 +6,6 @@ function Footer() {
 
 export default Footer;
 
-const StyledRoot = styled.footer``;
+const StyledRoot = styled.footer`
+  height: 53.1rem;
+`;
