@@ -1,10 +1,34 @@
 import styled from "styled-components";
+import { colors } from "styles/colors";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const StyledRoot = styled.div`
   display: flex;
-  gap: 2.4rem;
+  flex-direction: column;
+  margin-bottom: 8rem;
+
+  h3 {
+    font-family: "AppleSDGothicNeoM00";
+    font-size: 2.9rem;
+    font-weight: bold;
+    margin-bottom: 3.8rem;
+    color: ${colors.black};
+  }
 `;
 
-export const CardsWrapper = styled.div`
-  display: flex;
+export const ButtonWrapper = styled.div``;
+export const PrevButton = styled.button``;
+export const NextButton = styled.button``;
+
+export const StyledSlider = styled(Slider)`
+  .slick-list {
+    width: 130rem;
+    gap: 2.4rem;
+  }
+
+  .slick-slide div {
+    outline: none;
+  }
 `;

@@ -1,11 +1,22 @@
 import ContentsCard from "components/common/ContentsCard";
-import React, { useState } from "react";
-import { CardsWrapper, StyledRoot } from "./style";
+import React, { useCallback, useRef, useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import {
+  ButtonWrapper,
+  NextButton,
+  PrevButton,
+  StyledRoot,
+  StyledSlider,
+} from "./style";
 import FaveCardImg1 from "components/common/assets/img/fave_card_img1.png";
 import FaveCardImg2 from "components/common/assets/img/fave_card_img2.png";
 import FaveCardImg3 from "components/common/assets/img/fave_card_img3.png";
 import FaveCardImg4 from "components/common/assets/img/fave_card_img4.png";
 import FaveCardImg5 from "components/common/assets/img/fave_card_img5.png";
+import PrevArrow from "components/common/assets/icon/arrow_l.svg";
+import NextArrow from "components/common/assets/icon/arrow_r.svg";
 
 function FavePlace() {
   const [faveCardsInfo, setFaveCardsInfo] = useState([
@@ -48,19 +59,45 @@ function FavePlace() {
     });
     setFaveCardsInfo(newFaveCardsInfo);
   };
+  const slickRef = useRef(null);
+  const movePrev = useCallback(() => slickRef.current.slickPrev(), []);
+  const moveNext = useCallback(() => slickRef.current.slickNext(), []);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
 
   return (
     <StyledRoot>
-      {faveCardsInfo.map((faveCard) => {
-        return (
-          <CardsWrapper key={faveCard.id}>
-            <ContentsCard
-              faveCard={faveCard}
-              onClick={() => toggleBookmark(faveCard.id)}
-            />
-          </CardsWrapper>
-        );
-      })}
+      <div>
+        <h3>요즘 사람들이 좋아하는 공간의 비밀</h3>
+        {/* <ButtonWrapper>
+          <PrevButton onClick={movePrev}>
+            <PrevArrow />
+          </PrevButton>
+          <NextButton onClick={moveNext}>
+            <NextArrow />
+          </NextButton>
+        </ButtonWrapper> */}
+      </div>
+      <StyledSlider {...settings}>
+        {faveCardsInfo.map((faveCard) => {
+          return (
+            <div key={faveCard.id}>
+              <ContentsCard
+                faveCard={faveCard}
+                onClick={() => toggleBookmark(faveCard.id)}
+              />
+            </div>
+          );
+        })}
+      </StyledSlider>
     </StyledRoot>
   );
 }
