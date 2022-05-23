@@ -1,0 +1,143 @@
+{
+  "mainBanner": [
+    {
+      "id": 1,
+      "title": "Z세대 62.3%가 바라는\n거리두기 해제 이후에도\n계속되어야 할 OO시스템?",
+      "subTitle": "최소한의 위생 관리 시스템은 유지 됐으면 좋겠어요.\n코로나 이후 위생에 대한 기준이 높아져서,\n이 정도 관리는 되어야 안심하고 그 공간에 방문할 수 있을 듯 해요.",
+      "view": 1069,
+      "bookmark": 5,
+      "share": 1,
+      "src": "components/common/assets/img/main_img1.png",
+      "bookmarked": false
+    }
+  ],
+  "keyword": [
+    {
+      "id": 1,
+      "name": "마케팅레퍼런스"
+    },
+    {
+      "id": 2,
+      "name": "인플루언서"
+    },
+    {
+      "id": 3,
+      "name": "SNS"
+    },
+    {
+      "id": 4,
+      "name": "10대트렌드"
+    },
+    {
+      "id": 5,
+      "name": "채용"
+    },
+    {
+      "id": 6,
+      "name": "덕질문화"
+    },
+    {
+      "id": 7,
+      "name": "콜라보"
+    },
+    {
+      "id": 8,
+      "name": "데이터"
+    },
+    {
+      "id": 9,
+      "name": "유행어"
+    },
+    {
+      "id": 10,
+      "name": "Z세대소통법"
+    },
+    {
+      "id": 11,
+      "name": "굿즈"
+    },
+    {
+      "id": 12,
+      "name": "해외트렌드"
+    },
+    {
+      "id": 13,
+      "name": "메타버스"
+    },
+    {
+      "id": 14,
+      "name": "친환경"
+    },
+    {
+      "id": 15,
+      "name": "ESG"
+    },
+    {
+      "id": 16,
+      "name": "조직문화"
+    },
+    {
+      "id": 17,
+      "name": "밈"
+    },
+    {
+      "id": 18,
+      "name": "모델섭외"
+    },
+    {
+      "id": 19,
+      "name": "리스크관리"
+    },
+    {
+      "id": 20,
+      "name": "페르소나"
+    },
+    {
+      "id": 21,
+      "name": "소비트렌드"
+    },
+    {
+      "id": 22,
+      "name": "커뮤니티"
+    },
+    {
+      "id": 23,
+      "name": "숏폼"
+    },
+    {
+      "id": 24,
+      "name": "공간"
+    },
+    {
+      "id": 25,
+      "name": "틱톡"
+    }
+  ],
+  "upperSlider": [
+    {
+      "id": 1,
+      "description": "넷플릭스가 MZ세대에게 ‘팝업 스토어’ 맛집으로 소문난 이유",
+      "bookmarked": false
+    }
+  ],
+  "lowerSlider": [
+    {
+      "id": 1,
+      "description": "실전편! Z세대에게 컨펌받은 메타버스 행사 체크리스트 5",
+      "bookmarked": false
+    }
+  ],
+  "hotContents": [
+    {
+      "id": 1,
+      "description": "Z세대 73% \"코로나 이후, 지출에서 가장 큰 부분 차지하던 품목이 달라졌다\""
+    }
+  ],
+  "newContents": [
+    {
+      "id": 1,
+      "description": "엔데믹 시작? 예약 대기만 2,000명인 팝업스토어",
+      "bookmarked": false
+    }
+  ]
+}
