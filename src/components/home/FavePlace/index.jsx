@@ -62,9 +62,12 @@ function FavePlace() {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 2,
+    speed: 300,
     arrows: true,
     autoplay: true,
     autoplaySpeed: 2000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
   };
 
   return (

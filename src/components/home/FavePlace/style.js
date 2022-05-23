@@ -33,11 +33,11 @@ export const ButtonWrapper = styled.div`
 
 export const StyledSlider = styled(Slider)`
   .slick-list {
-    width: 130.2rem;
-    gap: 2.4rem;
+    width: 130rem;
   }
 
   .slick-slide div {
     outline: none;
+    width: 43rem;
   }
 `;
