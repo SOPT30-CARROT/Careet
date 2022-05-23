@@ -3,20 +3,14 @@ import React, { useCallback, useRef, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import {
-  ButtonWrapper,
-  NextButton,
-  PrevButton,
-  StyledRoot,
-  StyledSlider,
-} from "./style";
+import { ButtonWrapper, StyledRoot, StyledSlider } from "./style";
 import FaveCardImg1 from "components/common/assets/img/fave_card_img1.png";
 import FaveCardImg2 from "components/common/assets/img/fave_card_img2.png";
 import FaveCardImg3 from "components/common/assets/img/fave_card_img3.png";
 import FaveCardImg4 from "components/common/assets/img/fave_card_img4.png";
 import FaveCardImg5 from "components/common/assets/img/fave_card_img5.png";
-import PrevArrow from "components/common/assets/icon/arrow_l.svg";
-import NextArrow from "components/common/assets/icon/arrow_r.svg";
+import { ReactComponent as PrevArrow } from "components/common/assets/icon/arrow_l.svg";
+import { ReactComponent as NextArrow } from "components/common/assets/icon/arrow_r.svg";
 
 function FavePlace() {
   const [faveCardsInfo, setFaveCardsInfo] = useState([
@@ -77,16 +71,16 @@ function FavePlace() {
     <StyledRoot>
       <div>
         <h3>요즘 사람들이 좋아하는 공간의 비밀</h3>
-        {/* <ButtonWrapper>
-          <PrevButton onClick={movePrev}>
+        <ButtonWrapper>
+          <button onClick={movePrev}>
             <PrevArrow />
-          </PrevButton>
-          <NextButton onClick={moveNext}>
+          </button>
+          <button onClick={moveNext}>
             <NextArrow />
-          </NextButton>
-        </ButtonWrapper> */}
+          </button>
+        </ButtonWrapper>
       </div>
-      <StyledSlider {...settings}>
+      <StyledSlider ref={slickRef} {...settings}>
         {faveCardsInfo.map((faveCard) => {
           return (
             <div key={faveCard.id}>

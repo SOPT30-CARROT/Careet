@@ -9,22 +9,31 @@ export const StyledRoot = styled.div`
   flex-direction: column;
   margin-bottom: 8rem;
 
-  h3 {
-    font-family: "AppleSDGothicNeoM00";
-    font-size: 2.9rem;
-    font-weight: bold;
-    margin-bottom: 3.8rem;
-    color: ${colors.black};
+  div {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      font-family: "AppleSDGothicNeoM00";
+      font-size: 2.9rem;
+      font-weight: bold;
+      margin-bottom: 3.8rem;
+      color: ${colors.black};
+    }
   }
 `;
 
-export const ButtonWrapper = styled.div``;
-export const PrevButton = styled.button``;
-export const NextButton = styled.button``;
+export const ButtonWrapper = styled.div`
+  gap: 2.7rem;
+  button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+  }
+`;
 
 export const StyledSlider = styled(Slider)`
   .slick-list {
-    width: 130rem;
+    width: 130.2rem;
     gap: 2.4rem;
   }
 

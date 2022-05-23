@@ -4,9 +4,10 @@ import { colors } from "styles/colors";
 export const StyledRoot = styled.div`
   display: flex;
   flex-direction: column;
-  width: 41.8rem;
+  width: 42rem;
   height: 34.8rem;
   font-family: "AppleSDGothicNeoB00";
+  margin-right: 0.2rem;
 `;
 
 export const ImgWrapper = styled.div`
