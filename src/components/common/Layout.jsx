@@ -20,10 +20,6 @@ const StyledRoot = styled.div`
   align-items: center;
   width: 100vw;
   min-height: 100vh;
-
-  img {
-    width: 600px;
-  }
 `;
 
 const StyledMain = styled.main`
