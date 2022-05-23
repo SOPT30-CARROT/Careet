@@ -13,7 +13,7 @@ function ContentsCard({ faveCard, onClick }) {
       </ImgWrapper>
       <Title>{title}</Title>.
       <BookmarkWrapper>
-        {isBookmarked === true ? (
+        {isBookmarked ? (
           <Mark onClick={onClick} />
         ) : (
           <UnMark onClick={onClick} />
