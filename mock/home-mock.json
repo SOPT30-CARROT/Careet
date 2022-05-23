@@ -116,7 +116,32 @@
   "upperSlider": [
     {
       "id": 1,
+      "thumbnail": "components/common/assets/img/fave_card_img1.png",
       "description": "넷플릭스가 MZ세대에게 ‘팝업 스토어’ 맛집으로 소문난 이유",
+      "bookmarked": false
+    },
+    {
+      "id": 2,
+      "thumbnail": "components/common/assets/img/fave_card_img2.png",
+      "description": "오픈 3일 만에 6억 원 매출? 와인 전문 매장'보틀벙커' 체험기",
+      "bookmarked": false
+    },
+    {
+      "id": 3,
+      "thumbnail": "components/common/assets/img/fave_card_img3.png",
+      "description": "MZ세대가 생각하는 ‘핫플'의 기준이 바뀌고 있다",
+      "bookmarked": false
+    },
+    {
+      "id": 4,
+      "thumbnail": "components/common/assets/img/fave_card_img4.png",
+      "description": "Z세대가 직접 추천해준 졸업 선물 핫 아이템6",
+      "bookmarked": false
+    },
+    {
+      "id": 5,
+      "thumbnail": "components/common/assets/img/fave_card_img5.png",
+      "description": "쉿 우리끼리 봐요. Z세대 팬 비율이 높은 아티스트 LIST",
       "bookmarked": false
     }
   ],
