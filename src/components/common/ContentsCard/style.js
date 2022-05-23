@@ -24,6 +24,11 @@ export const Title = styled.div`
   margin-top: 1.6rem;
   width: 40.1rem;
   height: 6.2rem;
+  transition: 0.3s;
+  &:hover {
+    color: ${colors.orange};
+    transition: 0.5s;
+  }
 `;
 
 export const BookmarkWrapper = styled.div`
