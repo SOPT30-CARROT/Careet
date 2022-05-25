@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 export const StyledRoot = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 8.6rem;
   margin-bottom: 8rem;
 
   div {
