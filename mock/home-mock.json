@@ -148,7 +148,38 @@
   "lowerSlider": [
     {
       "id": 1,
-      "description": "실전편! Z세대에게 컨펌받은 메타버스 행사 체크리스트 5",
+      "thumbnail": "components/common/assets/img/nomore_card_img1.png",
+      "description": "넷플릭스가 MZ세대에게 ‘팝업 스토어’ 맛집으로 소문난 이유",
+      "bookmarked": false
+    },
+    {
+      "id": 2,
+      "thumbnail": "components/common/assets/img/nomore_card_img2.png",
+      "description": "누적 방문객 2천만! 제페토 한강공원 인기에는 다 이유가 있었구나",
+      "bookmarked": false
+    },
+    {
+      "id": 3,
+      "thumbnail": "components/common/assets/img/nomore_card_img3.png",
+      "description": "어렵다고 포기하실 건가요? Z세대는 이미 NFT에 주목하고 있습니다!",
+      "bookmarked": false
+    },
+    {
+      "id": 4,
+      "thumbnail": "components/common/assets/img/nomore_card_img4.png",
+      "description": "어떤 브랜드가 시험 기간 이벤트 잘했을까?",
+      "bookmarked": false
+    },
+    {
+      "id": 5,
+      "thumbnail": "components/common/assets/img/nomore_card_img5.png",
+      "description": "&quot;담당자가 바뀌었나?&quot; 이미지 싹 달라진 브랜드6",
+      "bookmarked": false
+    },
+    {
+      "id": 6,
+      "thumbnail": "components/common/assets/img/nomore_card_img5.png",
+      "description": "가정의 달 이벤트 준비 중이시죠? 레퍼런스 모아왔어요",
       "bookmarked": false
     }
   ],

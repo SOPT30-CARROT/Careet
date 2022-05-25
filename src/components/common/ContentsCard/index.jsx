@@ -11,7 +11,7 @@ function ContentsCard({ faveCard, onClick }) {
       <ImgWrapper>
         <img src={thumbnail} alt="썸네일" />
       </ImgWrapper>
-      <Title>{description}</Title>
+      <Title>{description}</Title>.
       <BookmarkWrapper>
         {isBookmarked ? (
           <Mark onClick={onClick} />
