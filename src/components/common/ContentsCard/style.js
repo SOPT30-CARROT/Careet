@@ -28,11 +28,11 @@ export const Title = styled.div`
 
 export const BookmarkWrapper = styled.div`
   margin-right: 0.3rem;
-  display: inline-block;
   /*  왜 이렇게 해도 북마크는 항상 왼쪽에 있을까 ? 하하
   float: right해도 그럼 ㅋㅋ position absolute해도 그럼 ㅋㅋ
   */
   svg {
-    float: right;
+    display: block;
+    margin: 0 0 0 auto;
   }
 `;
