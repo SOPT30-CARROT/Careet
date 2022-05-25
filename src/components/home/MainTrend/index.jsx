@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   StyledRoot,
   StyledContainer,
@@ -14,10 +14,21 @@ import {
   StyledBookmark,
 } from "./style";
 
-//import { ReactComponent as bookmarkIcon } from "components/common/assets/icon/bookmark_ic.svg";
-import { trendInfo } from "./trendInfo";
+import api from "api/index";
+
 function mainTrend() {
   const [isHovering, setIsHovering] = useState(false);
+  //const [order, setOrder] = useState(0);
+  const [trendInfo, setTrendInfo] = useState([]);
+  useEffect(() => {
+    const trends = api.mock.fetchMainBanner();
+    trends.then((res) => setTrendInfo(res[1]));
+  }, []);
+
+  // const handleOrder = (id) => {
+  //   const currentTrend = trendInfo.filter((trend) => trend.id === order);
+  //   setTrendInfo(currentTrend);
+  // };
 
   return (
     <StyledRoot>
@@ -27,19 +38,19 @@ function mainTrend() {
         onMouseOut={() => setIsHovering(false)}
       >
         <ImageWrapper>
-          <img src={trendInfo[0].img} />
+          {/* <img src={require(`{trendInfo.src}`).default} /> */}
         </ImageWrapper>
         <InfoText>
           <h1>지금 꼭 알아야 할 트렌드</h1>
-          <Title isHovering={isHovering}>{trendInfo[0].title}</Title>
-          <p>{trendInfo[0].subTitle}</p>
+          <Title isHovering={isHovering}>{trendInfo.title}</Title>
+          <p>{trendInfo.subTitle}</p>
           <span>
             <StyledViewIcon />
-            {trendInfo[0].view}
+            {trendInfo.view}
             <StyledBookmarkIcon />
-            {trendInfo[0].bookmark}
+            {trendInfo.bookmark}
             <StyledShareIcon />
-            {trendInfo[0].share}
+            {trendInfo.share}
           </span>
         </InfoText>
         <StyledBookmark />
