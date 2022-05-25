@@ -15,6 +15,7 @@ import {
 } from "./style";
 
 import api from "api/index";
+import tempImg from "components/common/assets/img/main_img1.png";
 
 function mainTrend() {
   const [isHovering, setIsHovering] = useState(false);
@@ -22,13 +23,8 @@ function mainTrend() {
   const [trendInfo, setTrendInfo] = useState([]);
   useEffect(() => {
     const trends = api.mock.fetchMainBanner();
-    trends.then((res) => setTrendInfo(res[1]));
+    trends.then((res) => setTrendInfo(res[0]));
   }, []);
-
-  // const handleOrder = (id) => {
-  //   const currentTrend = trendInfo.filter((trend) => trend.id === order);
-  //   setTrendInfo(currentTrend);
-  // };
 
   return (
     <StyledRoot>
@@ -38,7 +34,7 @@ function mainTrend() {
         onMouseOut={() => setIsHovering(false)}
       >
         <ImageWrapper>
-          {/* <img src={require(`{trendInfo.src}`).default} /> */}
+          <img src={tempImg} alt="트렌드 썸네일 사진" />
         </ImageWrapper>
         <InfoText>
           <h1>지금 꼭 알아야 할 트렌드</h1>
