@@ -61,7 +61,7 @@ function FavePlace() {
           return (
             <div key={faveCard.id}>
               <ContentsCard
-                faveCard={faveCard}
+                CardInfo={faveCard}
                 onClick={() => toggleBookmark(faveCard.id)}
               />
             </div>
