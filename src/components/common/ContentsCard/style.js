@@ -10,7 +10,7 @@ export const StyledRoot = styled.div`
 `;
 
 export const ImgWrapper = styled.div`
-  img {
+  & > img {
     width: 41.8rem;
     height: 23.2rem;
   }
