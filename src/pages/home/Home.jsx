@@ -1,4 +1,3 @@
-import React, { useCallback, useRef } from "react";
 import styled from "styled-components";
 import FavePlace from "components/home/FavePlace";
 import MiddleBanner from "components/home/MiddleBanner";
@@ -17,26 +16,13 @@ function Home() {
   };
 
   // 이미지 슬라이더 이동
-  const slickRef = useRef(null);
-  const movePrev = useCallback(() => slickRef.current.slickPrev(), []);
-  const moveNext = useCallback(() => slickRef.current.slickNext(), []);
 
   return (
     <StyledRoot>
       <KeywordTag />
-      <FavePlace
-        toggleBookmark={toggleBookmark}
-        slickRef={slickRef}
-        movePrev={movePrev}
-        moveNext={moveNext}
-      />
+      <FavePlace toggleBookmark={toggleBookmark} />
       <MiddleBanner />
-      <NoMore
-        toggleBookmark={toggleBookmark}
-        slickRef={slickRef}
-        movePrev={movePrev}
-        moveNext={moveNext}
-      />
+      <NoMore toggleBookmark={toggleBookmark} />
       <NewContents toggleBookmark={toggleBookmark} />
     </StyledRoot>
   );

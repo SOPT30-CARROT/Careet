@@ -35,6 +35,8 @@ export const ButtonWrapper = styled.div`
 export const StyledSlider = styled(Slider)`
   .slick-list {
     width: 130rem;
+    margin-left: 1.2rem;
+    margin-right: 1rem;
   }
 
   .slick-slide div {
