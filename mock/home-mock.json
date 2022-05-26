@@ -7,7 +7,7 @@
       "view": 1069,
       "bookmark": 5,
       "share": 1,
-      "src": "components/common/assets/img/main_img1.png",
+      "src": "main_img1.png",
       "bookmarked": false
     },
     {
@@ -17,7 +17,7 @@
       "view": 1032,
       "bookmark": 6,
       "share": 3,
-      "src": "components/common/assets/img/main_img2.png",
+      "src": "main_img2.png",
       "bookmarked": false
     },
     {
@@ -27,7 +27,7 @@
       "view": 1143,
       "bookmark": 3,
       "share": 8,
-      "src": "components/common/assets/img/main_img3.png",
+      "src": "main_img3.png",
       "bookmarked": false
     },
     {
@@ -37,7 +37,7 @@
       "view": 1213,
       "bookmark": 7,
       "share": 9,
-      "src": "components/common/assets/img/main_img4.png",
+      "src": "main_img4.png",
       "bookmarked": false
     }
   ],
