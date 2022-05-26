@@ -7,6 +7,7 @@ export const StyledRoot = styled.div`
   width: 44rem;
   height: 34.8rem;
   font-family: "AppleSDGothicNeoB00";
+  margin-bottom: 3.1rem;
 `;
 
 export const ImgWrapper = styled.div`
