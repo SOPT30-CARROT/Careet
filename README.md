@@ -13,17 +13,19 @@
 	<tr>
 	<td>
 		<ul>
-		<li>프리라이더</li>
+		<li>마이페이지</li>
 		</ul>
 	</td>
 	<td>
 	<ul>
-		<li>기사1</li>
+		<li>메인페이지</li>
+		<li>요즘사람들이 좋아하는 공간의 비밀, 배너, 이제는 모르시면 안됩니다, 새로나온콘텐츠</li>
 	</ul>
 	</td>
 	<td>
 		<ul>
-		<li>기사2</li>
+		<li>메인페이지</li>
+		<li>지금 꼭 알아야할 트렌드, 관심 키워드 콘텐츠 찾기, 요즘대세!인기콘텐츠, TOP버튼</li>
 		</ul>
 	</tr>
 	</table>
@@ -73,6 +75,8 @@ function Component() {
 3. `StyledWrapper`
 4. `StyledImage`
 
+최상위 컴포넌트는 `StyledRoot`로 고정
+
 ### export , import
 
 export한 친구의 이름 바꿔서 쓰지 말기!
@@ -85,7 +89,7 @@ export한 친구의 이름 바꿔서 쓰지 말기!
 
 ## 브랜치 전략 (ex. git flow)
 
-- git flow 사용
+- github flow 사용
 - 작업 전에 이슈 생성
 - 이슈 번호로 브랜치를 파서 작업
 - 작업이 다 끝나면 피쳐 브랜치에서 main 브랜치로 Pull Request 작성
