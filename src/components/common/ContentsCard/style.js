@@ -33,7 +33,7 @@ export const Title = styled.div`
 `;
 
 export const BookmarkWrapper = styled.div`
-  margin-right: 0.3rem;
+  margin-right: 3rem;
 
   svg {
     display: block;
