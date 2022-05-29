@@ -19,10 +19,19 @@ import api from "api/index";
 function mainTrend() {
   const [isHovering, setIsHovering] = useState(false);
   const [order, setOrder] = useState(0);
+  //trend 받아오기.
   const [trendInfo, setTrendInfo] = useState([]);
+  //보여주고 있는 트렌드.
+  const [currentTrend, setCurrentTrend] = useState([]);
+
   useEffect(() => {
     const trends = api.mock.fetchMainBanner();
-    trends.then((res) => setTrendInfo(res[order]));
+    trends.then((res) => setTrendInfo(res));
+    trends.then((res) => setCurrentTrend(res[order]));
+  }, []);
+
+  useEffect(() => {
+    setCurrentTrend(trendInfo[order]);
   }, [order]);
 
   function handleOrder(num) {
@@ -51,19 +60,19 @@ function mainTrend() {
         onMouseOut={() => setIsHovering(false)}
       >
         <ImageWrapper>
-          <img src={trendInfo.src} alt="트렌드 썸네일 사진" />
+          <img src={currentTrend.src} alt="트렌드 썸네일 사진" />
         </ImageWrapper>
         <InfoText>
           <h1>지금 꼭 알아야 할 트렌드</h1>
-          <Title isHovering={isHovering}>{trendInfo.title}</Title>
-          <p>{trendInfo.subTitle}</p>
+          <Title isHovering={isHovering}>{currentTrend.title}</Title>
+          <p>{currentTrend.subTitle}</p>
           <span>
             <StyledViewIcon />
-            {trendInfo.view}
+            {currentTrend.view}
             <StyledBookmarkIcon />
-            {trendInfo.bookmark}
+            {currentTrend.bookmark}
             <StyledShareIcon />
-            {trendInfo.share}
+            {currentTrend.share}
           </span>
         </InfoText>
         <StyledBookmark />
