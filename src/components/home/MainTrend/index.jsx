@@ -32,7 +32,11 @@ function mainTrend() {
   }, []);
 
   useEffect(() => {
-    if (trendInfo.length > 0) setCurrentTrend(trendInfo[order]);
+    if (trendInfo.length > 0) {
+      setCurrentTrend(trendInfo[order]);
+      const autoPlayer = setTimeout(() => handleOrder(1), 2000);
+      return () => clearTimeout(autoPlayer);
+    }
   }, [trendInfo, order]);
 
   function handleOrder(num) {
@@ -43,7 +47,7 @@ function mainTrend() {
       } else {
         setOrder((prevState) => prevState - 1);
       }
-      //오른쪽 클릭.
+      //오른쪽 클릭. 자동 전환.
     } else {
       if (order === 3) {
         setOrder(0);
@@ -52,22 +56,6 @@ function mainTrend() {
       }
     }
   }
-
-  // const toggleBookmark = async (id, bookmarked) => {
-  //   trendInfo.map((trend) => {
-  //     if (id === trend.id) {
-  //       api.mock.mutateBookmark("MAIN_BANNER", trend.id, false);
-  //     }
-  //   const newTrendInfo = trendInfo.map((trend) => {
-  //     if (id === trend.id) {
-  //       return {
-  //         ...trendInfo,
-  //         bookmarked: false;
-  //       }
-  //     }
-  //   })
-  //     };
-  // }\
 
   const toggleBookmark = async (id, bookmarkedStatus) => {
     await api.mock.mutateBookmark("MAIN_BANNER", id, !bookmarkedStatus);
