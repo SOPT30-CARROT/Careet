@@ -24,14 +24,15 @@ function mainTrend() {
   const [currentTrend, setCurrentTrend] = useState([]);
 
   useEffect(() => {
-    const trends = api.mock.fetchMainBanner();
-    trends.then((res) => setTrendInfo(res));
-    trends.then((res) => setCurrentTrend(res[order]));
+    (async () => {
+      const trends = await api.mock.fetchMainBanner();
+      setTrendInfo(trends);
+    })();
   }, []);
 
-  // useEffect(() => {
-  //   setCurrentTrend(trendInfo[order]);
-  // }, [order]);
+  useEffect(() => {
+    if (trendInfo.length > 0) setCurrentTrend(trendInfo[order]);
+  }, [trendInfo, order]);
 
   function handleOrder(num) {
     //왼쪽 클릭.
