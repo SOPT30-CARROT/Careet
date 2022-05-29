@@ -105,10 +105,12 @@ const Title = styled.h2`
   font-family: "AppleSDGothicNeoEB00";
   font-size: 3.6rem;
   font-weight: 400;
-  color: ${(props) =>
-    props.isHovering === true ? colors.orange : colors.black};
   margin-bottom: 1.1rem;
   line-height: 4.561rem;
+
+  ${StyledContainer}:hover & {
+    color: ${colors.orange};
+  }
 `;
 
 const ImageWrapper = styled.div``;

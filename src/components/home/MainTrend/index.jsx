@@ -17,7 +17,6 @@ import {
 import api from "api/index";
 
 function mainTrend() {
-  const [isHovering, setIsHovering] = useState(false);
   const [order, setOrder] = useState(0);
   //trend 받아오기.
   const [trendInfo, setTrendInfo] = useState([]);
@@ -30,9 +29,9 @@ function mainTrend() {
     trends.then((res) => setCurrentTrend(res[order]));
   }, []);
 
-  useEffect(() => {
-    setCurrentTrend(trendInfo[order]);
-  }, [order]);
+  // useEffect(() => {
+  //   setCurrentTrend(trendInfo[order]);
+  // }, [order]);
 
   function handleOrder(num) {
     //왼쪽 클릭.
@@ -55,16 +54,13 @@ function mainTrend() {
   return (
     <StyledRoot>
       <StyledArrowLeft onClick={() => handleOrder(-1)} order={order} />
-      <StyledContainer
-        onMouseOver={() => setIsHovering(true)}
-        onMouseOut={() => setIsHovering(false)}
-      >
+      <StyledContainer>
         <ImageWrapper>
           <img src={currentTrend.src} alt="트렌드 썸네일 사진" />
         </ImageWrapper>
         <InfoText>
           <h1>지금 꼭 알아야 할 트렌드</h1>
-          <Title isHovering={isHovering}>{currentTrend.title}</Title>
+          <Title>{currentTrend.title}</Title>
           <p>{currentTrend.subTitle}</p>
           <span>
             <StyledViewIcon />
