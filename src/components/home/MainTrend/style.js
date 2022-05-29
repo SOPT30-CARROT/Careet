@@ -7,8 +7,6 @@ import { ReactComponent as ViewIcon } from "components/common/assets/icon/eye_ic
 import { ReactComponent as BookmarkIcon } from "components/common/assets/icon/bookmark_ic_s.svg";
 import { ReactComponent as ShareIcon } from "components/common/assets/icon/share_ic.svg";
 
-import { ReactComponent as Bookmark } from "components/common/assets/icon/bookmark_ic.svg";
-
 const fadeOut = keyframes`
   0% {
     opacity: 1;
@@ -62,7 +60,7 @@ const StyledContainer = styled.div`
   cursor: pointer;
 `;
 
-const StyledBookmark = styled(Bookmark)`
+const BookmarkWrapper = styled.div`
   width: 20px;
   position: absolute;
   right: 0;
@@ -113,12 +111,9 @@ const Title = styled.h2`
   }
 `;
 
-const ImageWrapper = styled.div``;
-
 export {
   StyledRoot,
   StyledContainer,
-  ImageWrapper,
   InfoText,
   Title,
   StyledArrowLeft,
@@ -126,5 +121,5 @@ export {
   StyledViewIcon,
   StyledBookmarkIcon,
   StyledShareIcon,
-  StyledBookmark,
+  BookmarkWrapper,
 };

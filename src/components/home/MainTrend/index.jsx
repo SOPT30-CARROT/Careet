@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import {
   StyledRoot,
   StyledContainer,
-  ImageWrapper,
   InfoText,
   Title,
   StyledArrowLeft,
@@ -11,8 +10,10 @@ import {
   StyledViewIcon,
   StyledBookmarkIcon,
   StyledShareIcon,
-  StyledBookmark,
+  BookmarkWrapper,
 } from "./style";
+import { ReactComponent as Mark } from "components/common/assets/icon/bookmark_ic-1.svg";
+import { ReactComponent as UnMark } from "components/common/assets/icon/bookmark_ic.svg";
 
 import api from "api/index";
 
@@ -52,13 +53,44 @@ function mainTrend() {
     }
   }
 
+  // const toggleBookmark = async (id, bookmarked) => {
+  //   trendInfo.map((trend) => {
+  //     if (id === trend.id) {
+  //       api.mock.mutateBookmark("MAIN_BANNER", trend.id, false);
+  //     }
+  //   const newTrendInfo = trendInfo.map((trend) => {
+  //     if (id === trend.id) {
+  //       return {
+  //         ...trendInfo,
+  //         bookmarked: false;
+  //       }
+  //     }
+  //   })
+  //     };
+  // }\
+
+  const toggleBookmark = async (id, bookmarkedStatus) => {
+    await api.mock.mutateBookmark("MAIN_BANNER", id, !bookmarkedStatus);
+
+    const newTrendInfo = trendInfo.map((trend) => {
+      if (id === trend.id) {
+        return {
+          ...trend,
+          bookmarked: !bookmarkedStatus,
+        };
+      }
+
+      return trend;
+    });
+
+    setTrendInfo(newTrendInfo);
+  };
+
   return (
     <StyledRoot>
       <StyledArrowLeft onClick={() => handleOrder(-1)} order={order} />
       <StyledContainer>
-        <ImageWrapper>
-          <img src={currentTrend.src} alt="트렌드 썸네일 사진" />
-        </ImageWrapper>
+        <img src={currentTrend.src} alt="트렌드 썸네일 사진" />
         <InfoText>
           <h1>지금 꼭 알아야 할 트렌드</h1>
           <Title>{currentTrend.title}</Title>
@@ -72,7 +104,13 @@ function mainTrend() {
             {currentTrend.share}
           </span>
         </InfoText>
-        <StyledBookmark />
+        <BookmarkWrapper
+          onClick={() =>
+            toggleBookmark(currentTrend.id, currentTrend.bookmarked)
+          }
+        >
+          {currentTrend.bookmarked === true ? <Mark /> : <UnMark />}
+        </BookmarkWrapper>
       </StyledContainer>
       <StyledArrowRight onClick={() => handleOrder(1)} order={order} />
     </StyledRoot>
