@@ -1,0 +1,230 @@
+{
+  "mainBanner": [
+    {
+      "id": 1,
+      "title": "Z세대 62.3%가 바라는\n거리두기 해제 이후에도\n계속되어야 할 OO시스템?",
+      "subTitle": "최소한의 위생 관리 시스템은 유지 됐으면 좋겠어요.\n코로나 이후 위생에 대한 기준이 높아져서,\n이 정도 관리는 되어야 안심하고 그 공간에 방문할 수 있을 듯 해요.",
+      "view": 1069,
+      "bookmark": 5,
+      "share": 1,
+      "src": "main_img1.png",
+      "bookmarked": false
+    }
+  ],
+  "keyword": [
+    {
+      "id": 1,
+      "name": "마케팅레퍼런스"
+    },
+    {
+      "id": 2,
+      "name": "인플루언서"
+    },
+    {
+      "id": 3,
+      "name": "SNS"
+    },
+    {
+      "id": 4,
+      "name": "10대트렌드"
+    },
+    {
+      "id": 5,
+      "name": "채용"
+    },
+    {
+      "id": 6,
+      "name": "덕질문화"
+    },
+    {
+      "id": 7,
+      "name": "콜라보"
+    },
+    {
+      "id": 8,
+      "name": "데이터"
+    },
+    {
+      "id": 9,
+      "name": "유행어"
+    },
+    {
+      "id": 10,
+      "name": "Z세대소통법"
+    },
+    {
+      "id": 11,
+      "name": "굿즈"
+    },
+    {
+      "id": 12,
+      "name": "해외트렌드"
+    },
+    {
+      "id": 13,
+      "name": "메타버스"
+    },
+    {
+      "id": 14,
+      "name": "친환경"
+    },
+    {
+      "id": 15,
+      "name": "ESG"
+    },
+    {
+      "id": 16,
+      "name": "조직문화"
+    },
+    {
+      "id": 17,
+      "name": "밈"
+    },
+    {
+      "id": 18,
+      "name": "모델섭외"
+    },
+    {
+      "id": 19,
+      "name": "리스크관리"
+    },
+    {
+      "id": 20,
+      "name": "페르소나"
+    },
+    {
+      "id": 21,
+      "name": "소비트렌드"
+    },
+    {
+      "id": 22,
+      "name": "커뮤니티"
+    },
+    {
+      "id": 23,
+      "name": "숏폼"
+    },
+    {
+      "id": 24,
+      "name": "공간"
+    },
+    {
+      "id": 25,
+      "name": "틱톡"
+    }
+  ],
+  "upperSlider": [
+    {
+      "id": 1,
+      "thumbnail": "fave_card_img1.png",
+      "description": "넷플릭스가 MZ세대에게 ‘팝업 스토어’ 맛집으로 소문난 이유",
+      "bookmarked": false
+    },
+    {
+      "id": 2,
+      "thumbnail": "fave_card_img2.png",
+      "description": "오픈 3일 만에 6억 원 매출? 와인 전문 매장'보틀벙커' 체험기",
+      "bookmarked": false
+    },
+    {
+      "id": 3,
+      "thumbnail": "fave_card_img3.png",
+      "description": "MZ세대가 생각하는 ‘핫플'의 기준이 바뀌고 있다",
+      "bookmarked": false
+    },
+    {
+      "id": 4,
+      "thumbnail": "fave_card_img4.png",
+      "description": "Z세대가 직접 추천해준 졸업 선물 핫 아이템6",
+      "bookmarked": false
+    },
+    {
+      "id": 5,
+      "thumbnail": "fave_card_img5.png",
+      "description": "쉿 우리끼리 봐요. Z세대 팬 비율이 높은 아티스트 LIST",
+      "bookmarked": false
+    }
+  ],
+  "lowerSlider": [
+    {
+      "id": 1,
+      "thumbnail": "nomore_card_img1.png",
+      "description": "넷플릭스가 MZ세대에게 ‘팝업 스토어’ 맛집으로 소문난 이유",
+      "bookmarked": false
+    },
+    {
+      "id": 2,
+      "thumbnail": "nomore_card_img2.png",
+      "description": "누적 방문객 2천만! 제페토 한강공원 인기에는 다 이유가 있었구나",
+      "bookmarked": false
+    },
+    {
+      "id": 3,
+      "thumbnail": "nomore_card_img3.png",
+      "description": "어렵다고 포기하실 건가요? Z세대는 이미 NFT에 주목하고 있습니다!",
+      "bookmarked": false
+    },
+    {
+      "id": 4,
+      "thumbnail": "nomore_card_img4.png",
+      "description": "어떤 브랜드가 시험 기간 이벤트 잘했을까?",
+      "bookmarked": false
+    },
+    {
+      "id": 5,
+      "thumbnail": "nomore_card_img5.png",
+      "description": "&quot;담당자가 바뀌었나?&quot; 이미지 싹 달라진 브랜드6",
+      "bookmarked": false
+    },
+    {
+      "id": 6,
+      "thumbnail": "nomore_card_img6.png",
+      "description": "가정의 달 이벤트 준비 중이시죠? 레퍼런스 모아왔어요",
+      "bookmarked": false
+    }
+  ],
+  "hotContents": [
+    {
+      "id": 1,
+      "description": "Z세대 73% \"코로나 이후, 지출에서 가장 큰 부분 차지하던 품목이 달라졌다\""
+    }
+  ],
+  "newContents": [
+    {
+      "id": 1,
+      "thumbnail": "new_card_img1.png",
+      "description": "엔데믹 시작? 예약 대기만 2,000명인 팝업스토어",
+      "bookmarked": false
+    },
+    {
+      "id": 2,
+      "thumbnail": "new_card_img2.png",
+      "description": "포즈에 진심인 Z세대! 갸루브이 따라 하는 진짜 이유",
+      "bookmarked": false
+    },
+    {
+      "id": 3,
+      "thumbnail": "new_card_img3.png",
+      "description": "[캐릿 유튜브] Z세대 최애 캐릭터, '잔망 루피 커버 메이크업' 후기 (Feat. 이사배)",
+      "bookmarked": false
+    },
+    {
+      "id": 4,
+      "thumbnail": "new_card_img4.png",
+      "description": "혼토이즘? 혼놀로그? 혼자 노는 Z세대 문화, 마케팅에 활용하는 법.",
+      "bookmarked": false
+    },
+    {
+      "id": 5,
+      "thumbnail": "new_card_img5.png",
+      "description": "Z세대 62.3%는 거리두기 해제 이후에도 매장에서 OOOO가 되길 바란다고?",
+      "bookmarked": false
+    },
+    {
+      "id": 6,
+      "thumbnail": "new_card_img6.png",
+      "description": "레플 마케팅, 아직도 패션 업게에서만 활용하고 있다고 생각하셨나요?",
+      "bookmarked": false
+    }
+  ]
+}

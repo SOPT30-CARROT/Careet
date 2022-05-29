@@ -32,6 +32,8 @@ export const StyledRoot = styled.div`
     border: 0.1rem solid ${colors.tagGray};
     border-radius: 1.8rem;
 
+    transition: background 300ms ease-in-out, border 300ms ease-in-out;
+
     &:hover {
       background-color: ${colors.orange};
       border-color: ${colors.orange};
