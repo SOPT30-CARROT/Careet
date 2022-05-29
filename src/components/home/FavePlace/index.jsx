@@ -8,7 +8,7 @@ import { ButtonWrapper, StyledRoot, StyledSlider } from "./style";
 import { ReactComponent as PrevArrow } from "components/common/assets/icon/arrow_l.svg";
 import { ReactComponent as NextArrow } from "components/common/assets/icon/arrow_r.svg";
 
-function FavePlace() {
+function FavePlace({ toggleBookmark }) {
   const [faveCardsInfo, setFaveCardsInfo] = useState([]);
 
   useEffect(() => {
@@ -17,14 +17,6 @@ function FavePlace() {
       setFaveCardsInfo(data);
     })();
   }, []);
-
-  const toggleBookmark = (id) => {
-    const newFaveCardsInfo = faveCardsInfo.map((faveCard) => {
-      if (id === faveCard.id) faveCard.isBookmarked = !faveCard.isBookmarked;
-      return faveCard;
-    });
-    setFaveCardsInfo(newFaveCardsInfo);
-  };
 
   const slickRef = useRef(null);
   const movePrev = useCallback(() => slickRef.current.slickPrev(), []);
@@ -62,7 +54,9 @@ function FavePlace() {
             <div key={faveCard.id}>
               <ContentsCard
                 CardInfo={faveCard}
-                onClick={() => toggleBookmark(faveCard.id)}
+                onClick={() =>
+                  toggleBookmark(faveCardsInfo, setFaveCardsInfo, faveCard.id)
+                }
               />
             </div>
           );

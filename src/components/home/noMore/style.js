@@ -8,7 +8,7 @@ export const StyledRoot = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 11rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4.8rem;
 
   div {
     display: flex;

@@ -8,7 +8,7 @@ import { ButtonWrapper, StyledRoot, StyledSlider } from "./style";
 import { ReactComponent as PrevArrow } from "components/common/assets/icon/arrow_l.svg";
 import { ReactComponent as NextArrow } from "components/common/assets/icon/arrow_r.svg";
 
-function NoMore() {
+function NoMore({ toggleBookmark }) {
   const [noMoreCardsInfo, setNoMoreCardsInfo] = useState([]);
 
   useEffect(() => {
@@ -18,14 +18,6 @@ function NoMore() {
     })();
   }, []);
 
-  const toggleBookmark = (id) => {
-    const newNoMoreCardsInfo = noMoreCardsInfo.map((noMoreCard) => {
-      if (id === noMoreCard.id)
-        noMoreCard.isBookmarked = !noMoreCard.isBookmarked;
-      return noMoreCard;
-    });
-    setNoMoreCardsInfo(newNoMoreCardsInfo);
-  };
   const slickRef = useRef(null);
   const movePrev = useCallback(() => slickRef.current.slickPrev(), []);
   const moveNext = useCallback(() => slickRef.current.slickNext(), []);
@@ -60,7 +52,13 @@ function NoMore() {
             <div key={noMoreCard.id}>
               <ContentsCard
                 CardInfo={noMoreCard}
-                onClick={() => toggleBookmark(noMoreCard.id)}
+                onClick={() =>
+                  toggleBookmark(
+                    noMoreCardsInfo,
+                    setNoMoreCardsInfo,
+                    noMoreCard.id
+                  )
+                }
               />
             </div>
           );
