@@ -23,6 +23,8 @@ function mainTrend() {
   const [trendInfo, setTrendInfo] = useState([]);
   //보여주고 있는 트렌드.
   const [currentTrend, setCurrentTrend] = useState([]);
+  //전환 애니메이션.
+  const [changeState, setChangeState] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -34,8 +36,13 @@ function mainTrend() {
   useEffect(() => {
     if (trendInfo.length > 0) {
       setCurrentTrend(trendInfo[order]);
+      setChangeState(true);
+      const handleChange = setTimeout(() => setChangeState(false), 300);
       const autoPlayer = setTimeout(() => handleOrder(1), 2000);
-      return () => clearTimeout(autoPlayer);
+      return () => {
+        clearTimeout(handleChange);
+        clearTimeout(autoPlayer);
+      };
     }
   }, [trendInfo, order]);
 
@@ -79,7 +86,7 @@ function mainTrend() {
       <StyledArrowLeft onClick={() => handleOrder(-1)} order={order} />
       <StyledContainer>
         <img src={currentTrend.src} alt="트렌드 썸네일 사진" />
-        <InfoText>
+        <InfoText changeState={changeState}>
           <h1>지금 꼭 알아야 할 트렌드</h1>
           <Title>{currentTrend.title}</Title>
           <p>{currentTrend.subTitle}</p>

@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { colors } from "styles/colors";
 import { ReactComponent as ArrowLeft } from "components/common/assets/icon/arrow_l.svg";
 import { ReactComponent as ArrowRight } from "components/common/assets/icon/arrow_r.svg";
@@ -7,12 +7,12 @@ import { ReactComponent as ViewIcon } from "components/common/assets/icon/eye_ic
 import { ReactComponent as BookmarkIcon } from "components/common/assets/icon/bookmark_ic_s.svg";
 import { ReactComponent as ShareIcon } from "components/common/assets/icon/share_ic.svg";
 
-const fadeOut = keyframes`
+const fadeIn = keyframes`
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 `;
 
@@ -71,8 +71,12 @@ const InfoText = styled.div`
   width: 100%;
   text-align: center;
   white-space: pre-wrap;
-  animation: ${fadeOut} 0.5s ease-out;
-
+  animation: ${(props) =>
+    props.changeState === true
+      ? css`
+          ${fadeIn} 300ms ease-out;
+        `
+      : ""};
   h1 {
     font-family: "AppleSDGothicNeoB00";
     font-size: 1.7rem;
