@@ -27,6 +27,11 @@ const StyledArrowLeft = styled(ArrowLeft)`
   top: 50%;
   transform: translate(0, -50%);
   cursor: pointer;
+  &:hover {
+    path {
+      stroke: ${colors.gray1};
+    }
+  }
 `;
 
 const StyledArrowRight = styled(ArrowRight)`
@@ -35,6 +40,12 @@ const StyledArrowRight = styled(ArrowRight)`
   transform: translate(0, -50%);
   right: 0;
   cursor: pointer;
+
+  &:hover {
+    path {
+      stroke: ${colors.gray1};
+    }
+  }
 `;
 
 const StyledViewIcon = styled(ViewIcon)`
