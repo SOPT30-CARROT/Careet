@@ -20,6 +20,8 @@ const StyledRoot = styled.div`
   width: 138.8rem;
   height: 41.2rem;
   position: relative;
+  margin-top: 4.7rem;
+  margin-bottom: 4.9rem;
 `;
 
 const StyledArrowLeft = styled(ArrowLeft)`
