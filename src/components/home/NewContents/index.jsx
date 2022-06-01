@@ -1,4 +1,4 @@
-import api from "api";
+import realApi from "api/index";
 import ContentsCard from "components/common/ContentsCard";
 import { useEffect, useState } from "react";
 import { CardsContainer, StyledRoot } from "./style";
@@ -8,7 +8,7 @@ function newContents({ toggleBookmark }) {
 
   useEffect(() => {
     (async () => {
-      const data = await api.mock.fetchNewContents();
+      const data = await realApi.real.fetchNewContents();
       setNewCardsInfo(data);
     })();
   }, []);

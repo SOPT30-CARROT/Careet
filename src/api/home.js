@@ -1,4 +1,4 @@
-import { mockReq } from "./common/axios";
+import { mockReq, realReq } from "./common/axios";
 import { PATH } from "./common/constants";
 
 function fetchMainBanner() {
@@ -22,8 +22,9 @@ function fetchHotContents() {
 }
 
 function fetchNewContents() {
-  return mockReq.GET(PATH.NEW_CONTENTS);
+  return realReq.GET(PATH.NEW_CONTENTS);
 }
+
 function mutateBookmark(category, id, payload) {
   switch (category) {
     case "MAIN_BANNER":
@@ -52,7 +53,10 @@ export const mock = {
   fetchKeyword,
   fetchUpperSlider,
   fetchLowerSlider,
-  fetchHotContents,
   fetchNewContents,
   mutateBookmark,
+};
+
+export const real = {
+  fetchHotContents,
 };
