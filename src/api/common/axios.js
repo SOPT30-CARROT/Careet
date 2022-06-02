@@ -16,8 +16,7 @@ export const mockReq = {
   },
 };
 
-const REAL_BASE_URL =
-  "https://cors-anywhere.herokuapp.com/http://13.125.254.72:8000";
+const REAL_BASE_URL = "http://13.125.254.72:8000";
 const real = axios.create({
   baseURL: REAL_BASE_URL,
 });
