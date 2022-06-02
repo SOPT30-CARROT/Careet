@@ -5,11 +5,10 @@ import { CardsContainer, StyledRoot } from "./style";
 
 function newContents({ toggleBookmark }) {
   const [newCardsInfo, setNewCardsInfo] = useState([]);
-
   useEffect(() => {
     (async () => {
       const data = await api.realApi.real.fetchNewContents();
-      setNewCardsInfo(data);
+      setNewCardsInfo(data.data.contents);
     })();
   }, []);
 
@@ -17,7 +16,7 @@ function newContents({ toggleBookmark }) {
     <StyledRoot>
       <h3>새로 나온 콘텐츠</h3>
       <CardsContainer>
-        {newCardsInfo.map((newCard) => {
+        {newCardsInfo?.slice(0, 6).map((newCard) => {
           return (
             <div key={newCard.id}>
               <ContentsCard
