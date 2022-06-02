@@ -53,10 +53,10 @@ export const mock = {
   fetchKeyword,
   fetchUpperSlider,
   fetchLowerSlider,
-  fetchNewContents,
+  fetchHotContents,
   mutateBookmark,
 };
 
 export const real = {
-  fetchHotContents,
+  fetchNewContents,
 };

@@ -13,7 +13,7 @@ function NoMore({ toggleBookmark }) {
 
   useEffect(() => {
     (async () => {
-      const data = await api.mock.fetchLowerSlider();
+      const data = await api.api.mock.fetchLowerSlider();
       setNoMoreCardsInfo(data);
     })();
   }, []);

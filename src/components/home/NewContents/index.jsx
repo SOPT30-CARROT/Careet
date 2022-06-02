@@ -1,4 +1,4 @@
-import realApi from "api/index";
+import api from "api/index";
 import ContentsCard from "components/common/ContentsCard";
 import { useEffect, useState } from "react";
 import { CardsContainer, StyledRoot } from "./style";
@@ -8,7 +8,7 @@ function newContents({ toggleBookmark }) {
 
   useEffect(() => {
     (async () => {
-      const data = await realApi.real.fetchNewContents();
+      const data = await api.realApi.real.fetchNewContents();
       setNewCardsInfo(data);
     })();
   }, []);
