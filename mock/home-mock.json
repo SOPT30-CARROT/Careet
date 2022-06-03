@@ -213,43 +213,6 @@
       "bookmarked": false
     }
   ],
-  "hotContents": [
-    {
-      "id": 1,
-      "thumbnail": "components/common/assets/img/nomore_card_img5.png",
-      "description": "Z세대 73% \"코로나 이후, 지출에서 가장 큰 부분 차지하던 품목이 달라졌다\""
-    },
-    {
-      "id": 2,
-      "thumbnail": "components/common/assets/img/nomore_card_img5.png",
-      "description": "버추얼 아이돌 '이세돌' 모르면, 메타버스 트렌드 반만 아는 것입니다"
-    },
-    {
-      "id": 3,
-      "thumbnail": "components/common/assets/img/nomore_card_img5.png",
-      "description": "이렇게 만들면 Z세대가 봐준다고? 요즘 뜨는 숏폼 장인.zip"
-    },
-    {
-      "id": 4,
-      "thumbnail": "components/common/assets/img/nomore_card_img5.png",
-      "description": "포켓몬빵, 넷플릭스 팝업, 아이돌 포토 카드! 성공한 마케팅의 공통점 = 랜덤 뽑기?"
-    },
-    {
-      "id": 5,
-      "thumbnail": "components/common/assets/img/nomore_card_img5.png",
-      "description": "MZ세대 커뮤니티 눈팅은 이렇게 하는 겁니다"
-    },
-    {
-      "id": 6,
-      "thumbnail": "components/common/assets/img/nomore_card_img5.png",
-      "description": "이게 이 사람이 만든 밈이었어? (feat. 박재범, BTS 정국, NCT 천러"
-    },
-    {
-      "id": 7,
-      "thumbnail": "components/common/assets/img/nomore_card_img5.png",
-      "description": "이게 이 사람이 만든 밈이었어? (feat. 박재범, BTS 정국, NCT 천러"
-    }
-  ],
   "newContents": [
     {
       "id": 1,
