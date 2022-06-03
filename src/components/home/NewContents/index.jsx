@@ -1,16 +1,43 @@
 import api from "api/index";
+import axios from "axios";
 import ContentsCard from "components/common/ContentsCard";
 import { useEffect, useState } from "react";
 import { CardsContainer, StyledRoot } from "./style";
 
-function newContents({ toggleBookmark }) {
+function newContents() {
   const [newCardsInfo, setNewCardsInfo] = useState([]);
+
   useEffect(() => {
-    (async () => {
-      const data = await api.realApi.real.fetchNewContents();
-      setNewCardsInfo(data.data.contents);
-    })();
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("/content/recent");
+        setNewCardsInfo(response.data.contents);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+    fetchData();
   }, []);
+
+  const toggleBookmark = (CardsInfo, setCardsInfo, id) => {
+    const postBookmark = async () => {
+      try {
+        const data = await api.realApi.real.postToggleBookmark(
+          `/${id}/628ccd7c020e2964ddd2c153`
+        );
+        console.log(data);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+    postBookmark();
+    const newCardsInfo = CardsInfo.map((Card) => {
+      if (id === Card._id) Card.isBookmarked = !Card.isBookmarked;
+      return Card;
+    });
+
+    setCardsInfo(newCardsInfo);
+  };
 
   return (
     <StyledRoot>
@@ -22,7 +49,7 @@ function newContents({ toggleBookmark }) {
               <ContentsCard
                 CardInfo={newCard}
                 onClick={() =>
-                  toggleBookmark(newCardsInfo, setNewCardsInfo, newCard.id)
+                  toggleBookmark(newCardsInfo, setNewCardsInfo, newCard._id)
                 }
               />
             </div>

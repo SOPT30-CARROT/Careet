@@ -48,6 +48,10 @@ function mutateBookmark(category, id, payload) {
   }
 }
 
+function postToggleBookmark(path) {
+  return realReq.POST(path);
+}
+
 export const mock = {
   fetchMainBanner,
   fetchKeyword,
@@ -59,4 +63,5 @@ export const mock = {
 
 export const real = {
   fetchNewContents,
+  postToggleBookmark,
 };

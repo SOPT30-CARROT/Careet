@@ -23,7 +23,7 @@ function Home() {
       <FavePlace toggleBookmark={toggleBookmark} />
       <MiddleBanner />
       <NoMore toggleBookmark={toggleBookmark} />
-      <NewContents toggleBookmark={toggleBookmark} />
+      <NewContents />
     </StyledRoot>
   );
 }
