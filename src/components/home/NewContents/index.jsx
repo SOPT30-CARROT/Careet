@@ -62,7 +62,7 @@ function newContents() {
       <CardsContainer>
         {newCardsInfo?.slice(0, 6).map((newCard) => {
           return (
-            <div key={newCard.id}>
+            <div key={newCard._id}>
               <ContentsCard
                 CardInfo={newCard}
                 onClick={() =>
