@@ -5,4 +5,5 @@ export const PATH = {
   LOWER_SLIDER: "/lowerSlider",
   HOT_CONTENTS: "/hotContents",
   NEW_CONTENTS: "/newContents",
+  BOOKMARKED: "/bookmark",
 };
