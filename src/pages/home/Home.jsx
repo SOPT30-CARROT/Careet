@@ -4,6 +4,7 @@ import FavePlace from "components/home/FavePlace";
 import MiddleBanner from "components/home/MiddleBanner";
 import NoMore from "components/home/noMore";
 import KeywordTag from "components/home/KeywordTag";
+import ScrollTopButton from "components/home/ScrollTopButton";
 import NewContents from "components/home/NewContents";
 
 function Home() {
@@ -26,6 +27,7 @@ function Home() {
       <MiddleBanner />
       <NoMore toggleBookmark={toggleBookmark} />
       <NewContents toggleBookmark={toggleBookmark} />
+      <ScrollTopButton />
     </StyledRoot>
   );
 }
