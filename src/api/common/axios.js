@@ -8,6 +8,9 @@ const mock = axios.create({
 
 const real = axios.create({
   baseURL: REAL_BASE_URL,
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 export const mockReq = {
