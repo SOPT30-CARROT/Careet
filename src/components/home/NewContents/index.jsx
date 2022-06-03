@@ -22,10 +22,31 @@ function newContents() {
   const toggleBookmark = (CardsInfo, setCardsInfo, id) => {
     (async () => {
       const data = await api.realApi.real.postToggleBookmark(
-        `/${id}/628ccd7c020e2964ddd2c153`
+        `/${id}/628ccd7c020e2964ddd2c153`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
       console.log(data);
     })();
+
+    // const postData = async () => {
+    //   try {
+    //     const data = await axios.post(`/${id}/628ccd7c020e2964ddd2c153`, {
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //     });
+    //     if (data.status === 200) {
+    //       return data.data;
+    //     }
+    //   } catch (e) {
+    //     console.error(e);
+    //   }
+    // };
+    // postData();
 
     const newCardsInfo = CardsInfo.map((Card) => {
       if (id === Card._id) Card.isBookmarked = !Card.isBookmarked;
