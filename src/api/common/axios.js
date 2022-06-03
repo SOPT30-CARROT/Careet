@@ -31,6 +31,7 @@ export const realReq = {
   },
 
   async POST(path, body) {
-    await real(`/${path}`);
+    const { data } = await real.post(`/${path}`);
+    return data;
   },
 };

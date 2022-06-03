@@ -11,6 +11,7 @@ function newContents() {
     const fetchData = async () => {
       try {
         const response = await axios.get("/content/recent");
+        console.log(response);
         setNewCardsInfo(response.data.data.contents);
       } catch (e) {
         console.error(e);
@@ -21,15 +22,15 @@ function newContents() {
 
   const toggleBookmark = (CardsInfo, setCardsInfo, id) => {
     (async () => {
-      const data = await api.realApi.real.postToggleBookmark(
-        `/${id}/628ccd7c020e2964ddd2c153`,
+      const { data } = await axios.post(
+        `bookmark/${id}/628ccd7c020e2964ddd2c153`,
+        null,
         {
           headers: {
             "Content-Type": "application/json",
           },
         }
       );
-      console.log(data);
     })();
 
     // const postData = async () => {

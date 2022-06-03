@@ -29,6 +29,7 @@ function mainTrend() {
   useEffect(() => {
     (async () => {
       const trends = await api.api.mock.fetchMainBanner();
+      console.log(trends);
       setTrendInfo(trends);
     })();
   }, []);
