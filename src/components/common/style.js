@@ -58,3 +58,12 @@ export const StyledProfile = styled.div`
     margin-left: 1rem;
   }
 `;
+
+export const StyledFooter = styled.footer`
+  width: 100%;
+  height: 53.1rem;
+  background-color: ${colors.bgGray};
+  display: flex;
+  justify-content: center;
+  padding: 0 21.3rem;
+`;
