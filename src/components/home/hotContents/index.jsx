@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { StyledRoot, StyledContainer } from "./style";
-import api from "api/index";
+import axios from "axios";
 
 function hotContents() {
   const [hotContent, setHotContent] = useState([]);
   useEffect(() => {
-    const hotContents = api.mock.fetchHotContents();
-    hotContents.then((res) => setHotContent(res.slice(0, 6)));
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("/content/popular");
+        setHotContent(response.data.data.contents.slice(0, 6));
+      } catch (e) {
+        console.error(e);
+      }
+    };
+    fetchData();
   }, []);
 
   const hotContentList = hotContent.map((hotContent, index) => (
-    <li key={hotContent.id}>
+    <li key={hotContent._id}>
       <span>{index + 1}</span>
-      <img src={hotContent.description} />
+      <img src={hotContent.thumbnail} />
       <p>{hotContent.description}</p>
     </li>
   ));
