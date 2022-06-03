@@ -26,7 +26,7 @@ function Home() {
       <KeywordTag />
       <FavePlace toggleBookmark={toggleBookmark} />
       <MiddleBanner />
-      <NoMore toggleBookmark={toggleBookmark} /> 
+      <NoMore toggleBookmark={toggleBookmark} />
       <HotContents />
       <NewContents />
       <ScrollTopButton />
