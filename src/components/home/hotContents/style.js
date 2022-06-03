@@ -4,7 +4,6 @@ import { colors } from "styles/colors";
 export const StyledRoot = styled.div`
   background-color: ${colors.bgGray};
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
   padding-top: 6.8rem;
   padding-bottom: 8.3rem;
   display: flex;
@@ -35,6 +34,8 @@ export const StyledRoot = styled.div`
 
   //번호.
   li > span {
+    display: inline-block;
+    width: 3.9rem;
     font-family: "Montserrat";
     font-size: 3.2rem;
     letter-spacing: -0.03em;
@@ -44,7 +45,6 @@ export const StyledRoot = styled.div`
   li > img {
     width: 13.8rem;
     height: 7.6rem;
-    margin-left: 2.6rem;
     margin-right: 2.1rem;
   }
 
