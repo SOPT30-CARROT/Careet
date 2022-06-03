@@ -37,6 +37,6 @@ export const BookmarkWrapper = styled.div`
     width: auto;
     display: block;
     margin: 0 0 0 auto;
-    padding-right: 1.2rem;
+    padding-right: 2rem;
   }
 `;
