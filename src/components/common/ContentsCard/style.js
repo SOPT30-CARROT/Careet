@@ -34,8 +34,9 @@ export const Title = styled.div`
 
 export const BookmarkWrapper = styled.div`
   svg {
+    width: auto;
     display: block;
     margin: 0 0 0 auto;
-    padding-right: 1rem;
+    padding-right: 2rem;
   }
 `;
