@@ -15,3 +15,20 @@ export const mockReq = {
     await mock.patch(path, body);
   },
 };
+
+const REAL_BASE_URL = "http://13.125.254.72:8000";
+const real = axios.create({
+  baseURL: REAL_BASE_URL,
+});
+
+export const realReq = {
+  async GET(path) {
+    const { data } = await real(path);
+    return data;
+  },
+
+  async POST(path) {
+    console.log(path);
+    await real(`/${path}`);
+  },
+};

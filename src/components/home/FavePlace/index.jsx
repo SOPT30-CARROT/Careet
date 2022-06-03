@@ -13,7 +13,7 @@ function FavePlace({ toggleBookmark }) {
 
   useEffect(() => {
     (async () => {
-      const data = await api.mock.fetchUpperSlider();
+      const data = await api.api.mock.fetchUpperSlider();
       setFaveCardsInfo(data);
     })();
   }, []);

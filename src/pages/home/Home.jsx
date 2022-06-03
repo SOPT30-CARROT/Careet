@@ -28,7 +28,7 @@ function Home() {
       <MiddleBanner />
       <NoMore toggleBookmark={toggleBookmark} />
       <HotContents />
-      <NewContents toggleBookmark={toggleBookmark} />
+      <NewContents />
       <ScrollTopButton />
     </StyledRoot>
   );
