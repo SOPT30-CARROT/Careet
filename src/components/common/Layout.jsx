@@ -24,4 +24,10 @@ const StyledRoot = styled.div`
 
 const StyledMain = styled.main`
   flex-grow: 1;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
