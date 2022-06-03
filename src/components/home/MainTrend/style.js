@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { colors } from "styles/colors";
 import { ReactComponent as ArrowLeft } from "components/common/assets/icon/arrow_l.svg";
 import { ReactComponent as ArrowRight } from "components/common/assets/icon/arrow_r.svg";
@@ -7,18 +7,33 @@ import { ReactComponent as ViewIcon } from "components/common/assets/icon/eye_ic
 import { ReactComponent as BookmarkIcon } from "components/common/assets/icon/bookmark_ic_s.svg";
 import { ReactComponent as ShareIcon } from "components/common/assets/icon/share_ic.svg";
 
-import { ReactComponent as Bookmark } from "components/common/assets/icon/bookmark_ic.svg";
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 const StyledRoot = styled.div`
   width: 138.8rem;
   height: 41.2rem;
   position: relative;
+  margin-top: 4.7rem;
+  margin-bottom: 4.9rem;
 `;
 
 const StyledArrowLeft = styled(ArrowLeft)`
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  cursor: pointer;
+  &:hover {
+    path {
+      stroke: ${colors.gray1};
+    }
+  }
 `;
 
 const StyledArrowRight = styled(ArrowRight)`
@@ -26,6 +41,13 @@ const StyledArrowRight = styled(ArrowRight)`
   top: 50%;
   transform: translate(0, -50%);
   right: 0;
+  cursor: pointer;
+
+  &:hover {
+    path {
+      stroke: ${colors.gray1};
+    }
+  }
 `;
 
 const StyledViewIcon = styled(ViewIcon)`
@@ -51,7 +73,7 @@ const StyledContainer = styled.div`
   cursor: pointer;
 `;
 
-const StyledBookmark = styled(Bookmark)`
+const BookmarkWrapper = styled.div`
   width: 20px;
   position: absolute;
   right: 0;
@@ -62,7 +84,12 @@ const InfoText = styled.div`
   width: 100%;
   text-align: center;
   white-space: pre-wrap;
-
+  animation: ${(props) =>
+    props.changeState === true
+      ? css`
+          ${fadeIn} 300ms ease-out;
+        `
+      : ""};
   h1 {
     font-family: "AppleSDGothicNeoB00";
     font-size: 1.7rem;
@@ -93,18 +120,17 @@ const Title = styled.h2`
   font-family: "AppleSDGothicNeoEB00";
   font-size: 3.6rem;
   font-weight: 400;
-  color: ${(props) =>
-    props.isHovering === true ? colors.orange : colors.black};
   margin-bottom: 1.1rem;
   line-height: 4.561rem;
-`;
 
-const ImageWrapper = styled.div``;
+  ${StyledContainer}:hover & {
+    color: ${colors.orange};
+  }
+`;
 
 export {
   StyledRoot,
   StyledContainer,
-  ImageWrapper,
   InfoText,
   Title,
   StyledArrowLeft,
@@ -112,5 +138,5 @@ export {
   StyledViewIcon,
   StyledBookmarkIcon,
   StyledShareIcon,
-  StyledBookmark,
+  BookmarkWrapper,
 };
