@@ -5,7 +5,7 @@ import api from "api/index";
 function keywordTag() {
   const [keyword, setKeyword] = useState([]);
   useEffect(() => {
-    const keywords = api.mock.fetchKeyword();
+    const keywords = api.api.mock.fetchKeyword();
     keywords.then((res) => setKeyword(res));
   }, []);
 

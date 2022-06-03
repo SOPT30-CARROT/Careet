@@ -4,6 +4,6 @@ export const PATH = {
   UPPER_SLIDER: "/upperSlider",
   LOWER_SLIDER: "/lowerSlider",
   HOT_CONTENTS: "/hotContents",
-  NEW_CONTENTS: "/newContents",
   BOOKMARKED: "/bookmark",
+  NEW_CONTENTS: "/content/recent",
 };

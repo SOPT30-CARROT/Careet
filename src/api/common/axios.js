@@ -28,6 +28,6 @@ export const realReq = {
   },
 
   async POST(path, body) {
-    await real.patch(path, body);
+    await real(`/${path}`);
   },
 };

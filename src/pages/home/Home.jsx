@@ -1,8 +1,11 @@
 import styled from "styled-components";
+import MainTrend from "components/home/MainTrend";
 import FavePlace from "components/home/FavePlace";
 import MiddleBanner from "components/home/MiddleBanner";
 import NoMore from "components/home/noMore";
 import KeywordTag from "components/home/KeywordTag";
+import HotContents from "components/home/hotContents";
+import ScrollTopButton from "components/home/ScrollTopButton";
 import NewContents from "components/home/NewContents";
 
 function Home() {
@@ -19,11 +22,14 @@ function Home() {
 
   return (
     <StyledRoot>
+      <MainTrend />
       <KeywordTag />
       <FavePlace toggleBookmark={toggleBookmark} />
       <MiddleBanner />
       <NoMore toggleBookmark={toggleBookmark} />
-      <NewContents toggleBookmark={toggleBookmark} />
+      <HotContents />
+      <NewContents />
+      <ScrollTopButton />
     </StyledRoot>
   );
 }

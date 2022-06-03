@@ -4,14 +4,14 @@ import { ReactComponent as Mark } from "components/common/assets/icon/bookmark_i
 import { ReactComponent as UnMark } from "components/common/assets/icon/bookmark_ic.svg";
 
 function ContentsCard({ CardInfo, onClick }) {
-  const { id, thumbnail, description, isBookmarked } = CardInfo;
+  const { id, thumbnail, title, isBookmarked } = CardInfo;
 
   return (
     <StyledRoot>
       <ImgWrapper>
         <img src={thumbnail} alt="썸네일" />
       </ImgWrapper>
-      <Title>{description}</Title>.
+      <Title>{title}</Title>.
       <BookmarkWrapper>
         {isBookmarked ? (
           <Mark onClick={onClick} />
