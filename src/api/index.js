@@ -1,5 +1,6 @@
-import { mock } from "./home";
+import { mock, real } from "./home";
 
 const api = { mock };
+const realApi = { real };
 
-export default api;
+export default { api, realApi };
