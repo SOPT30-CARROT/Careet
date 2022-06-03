@@ -65,7 +65,8 @@ function mainTrend() {
   }
 
   const toggleBookmark = async (id, bookmarkedStatus) => {
-    await api.mock.mutateBookmark("MAIN_BANNER", id, !bookmarkedStatus);
+    // 목데이터 patch 기능.
+    // await api.mock.mutateBookmark("MAIN_BANNER", id, !bookmarkedStatus);
 
     const newTrendInfo = trendInfo.map((trend) => {
       if (id === trend.id) {
