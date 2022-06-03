@@ -11,7 +11,7 @@ function newContents() {
     const fetchData = async () => {
       try {
         const response = await axios.get("/content/recent");
-        setNewCardsInfo(response.data.contents);
+        setNewCardsInfo(response.data.data.contents);
       } catch (e) {
         console.error(e);
       }
@@ -20,17 +20,13 @@ function newContents() {
   }, []);
 
   const toggleBookmark = (CardsInfo, setCardsInfo, id) => {
-    const postBookmark = async () => {
-      try {
-        const data = await api.realApi.real.postToggleBookmark(
-          `/${id}/628ccd7c020e2964ddd2c153`
-        );
-        console.log(data);
-      } catch (e) {
-        console.error(e);
-      }
-    };
-    postBookmark();
+    (async () => {
+      const data = await api.realApi.real.postToggleBookmark(
+        `/${id}/628ccd7c020e2964ddd2c153`
+      );
+      console.log(data);
+    })();
+
     const newCardsInfo = CardsInfo.map((Card) => {
       if (id === Card._id) Card.isBookmarked = !Card.isBookmarked;
       return Card;
