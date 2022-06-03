@@ -23,6 +23,7 @@ const StyledRoot = styled.div`
 `;
 
 const StyledMain = styled.main`
+  width: 100%;
   flex-grow: 1;
 
   & > div {

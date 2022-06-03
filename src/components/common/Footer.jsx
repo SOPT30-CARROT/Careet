@@ -1,9 +1,11 @@
 import React from "react";
-import styled from "styled-components";
+import { StyledFooter as StyledRoot } from "./style";
 function Footer() {
-  return <StyledRoot>Footer</StyledRoot>;
+  return (
+    <StyledRoot>
+      <img src="/footer.png" />
+    </StyledRoot>
+  );
 }
 
 export default Footer;
-
-const StyledRoot = styled.footer``;
