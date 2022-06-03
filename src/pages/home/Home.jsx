@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import MainTrend from "components/home/MainTrend";
 import FavePlace from "components/home/FavePlace";
 import MiddleBanner from "components/home/MiddleBanner";
 import NoMore from "components/home/noMore";
@@ -19,6 +20,7 @@ function Home() {
 
   return (
     <StyledRoot>
+      <MainTrend />
       <KeywordTag />
       <FavePlace toggleBookmark={toggleBookmark} />
       <MiddleBanner />
